@@ -1,0 +1,464 @@
+@media (max-width: 1100px) {
+
+  .menu-cs {
+    display: none;
+  }
+
+  .menu__list-item-custom {
+    display: block;
+  }
+
+  .header__inner {
+    justify-content: space-between;
+  }
+
+  .menu {
+
+
+    &__list {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: #FFFFFF;
+      z-index: 2;
+      display: flex;
+      padding-top: 0;
+      padding-left: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-100%);
+      transition: transform .5s;
+      overflow: auto;
+
+      &--active {
+        transform: translateY(0%);
+      }
+    }
+
+    &__menu {
+      margin-left: 0;
+      order: 1;
+    }
+
+    &__btn {
+      margin-right: 0;
+      z-index: -2;
+    }
+  }
+
+  .menu__list-item + .menu__list-item {
+    margin-left: 0;
+  }
+
+  .menu__list-item {
+    margin-bottom: 40px;
+
+    a {
+      font-size: 18px;
+      line-height: 26px;
+      color: #131313;
+    }
+  }
+
+  .menu__list-item-custom + .menu__list-item-custom {
+    margin-left: 0;
+  }
+
+  .menu__list-item-custom {
+    margin-bottom: 40px;
+
+    a {
+      font-size: 18px;
+      line-height: 26px;
+      color: #131313;
+    }
+  }
+
+  .menu_btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    z-index: 999999;
+  }
+
+  .menu_btn::before,
+  .menu_btn::after {
+    content: '';
+    width: 24px;
+    height: 2px;
+    background: #000;
+    display: block;
+    margin-bottom: 4px;
+    transition: transform .3s;
+  }
+
+  .menu_btn::after {
+    margin-bottom: 0;
+    width: 16px;
+    margin-left: auto;
+  }
+
+  .menu_btn-line {
+    background: #000;
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin-bottom: 4px;
+    opacity: 1;
+    transition: opacity .6s;
+  }
+
+  .menu_btn.menu_btn--active {
+    .menu_btn-line {
+      opacity: 0;
+      transition: opacity .1s;
+    }
+
+    &::after {
+      width: 24px;
+      background-color: #000;
+      transform: translateY(-6px) rotate(-135deg);
+    }
+
+    &::before {
+      background-color: #000;
+      transform: translateY(6px) rotate(135deg);
+    }
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .story__inner {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .venue__inner {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .venue::before {
+    left: 35%;
+  }
+
+  .hotel__inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 70px;
+  }
+
+  .hotel {
+    margin-bottom: 100px;
+  }
+
+  .hotel__item {
+    flex-basis: auto;
+  }
+
+  .party__inner {
+    flex-direction: column;
+  }
+
+  .party__box {
+    gap: 40px;
+  }
+
+}
+
+@media (max-width: 890px) {
+
+  .story__bg {
+    height: 400px;
+  }
+
+  .party__inner::before {
+    left: 30%;
+  }
+
+  .registry__inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .info__inner {
+    padding-left: 0;
+  }
+
+  .info__item {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .info__item div {
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 640px) {
+
+  .contact__inner::before {
+    left: -120px;
+  }
+
+  .header__inner {
+    padding: 20px 0 30px;
+  }
+
+  .footer__menu-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer__copy-text {
+    font-size: 16px;
+  }
+
+  .footer__menu-link {
+    font-size: 18px;
+  }
+
+  .contact__inner {
+    padding-bottom: 80px;
+  }
+
+  .contact__input {
+    width: 100%;
+  }
+
+  .contact__box {
+    flex-direction: column;
+  }
+
+  .contact__text {
+    text-align: center;
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .contact__title {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  .hotel__text {
+    font-size: 16px;
+  }
+
+  .registry__title {
+    margin-bottom: 50px;
+    font-size: 40px;
+  }
+
+  .registry__text {
+    font-size: 16px;
+  }
+
+  .registry__img {
+    width: 60%;
+    height: auto;
+  }
+
+  .registry__item {
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .registry__wrapper {
+    max-width: 250px;
+  }
+
+  .info {
+    margin-bottom: 100px;
+  }
+
+  .hotel__title {
+    font-size: 40px;
+  }
+
+  .hotel__button {
+    font-size: 16px;
+    padding: 14px 22px;
+  }
+
+  .party__items-link {
+    font-size: 18px;
+  }
+
+  .party__item {
+    gap: 15px;
+    max-width: fit-content;
+  }
+
+  .party__box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .party__name {
+    font-size: 16px;
+  }
+
+  .party__title {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  .venue::before {
+    left: 25%;
+  }
+
+  .venue__inner {
+    gap: 50px;
+  }
+
+  .venue__item:before {
+    display: none;
+  }
+
+  .venue__item:after {
+    display: none;
+  }
+
+  .venue__text {
+    font-size: 16px;
+  }
+
+  .venue__place {
+    font-size: 16px;
+  }
+
+  .venue__title {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  .venue__subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .story__bg {
+    height: 300px;
+  }
+
+  .story__inner {
+    padding: 50px 0;
+  }
+
+  .story__title {
+    font-size: 60px;
+  }
+
+  .story__text {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .story {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  .header__inner {
+    align-items: center;
+  }
+
+  .header__logo {
+    width: 60%;
+  }
+
+  .top__inner {
+    margin: 0 auto 30px;
+  }
+
+  .top {
+    padding-top: 0;
+  }
+
+  .top__text {
+    font-size: 16px;
+  }
+
+  .top__title {
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
+
+  .top__date {
+    font-size: 16px;
+  }
+
+  .info__title {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  .info__item {
+    gap: 30px;
+  }
+
+  .info__items-title {
+    font-size: 28px;
+  }
+
+  .info__items-text {
+    font-size: 16px;
+  }
+
+  .info__inner {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 440px) {
+
+  .info__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .party__inner::before {
+    left: 10%;
+  }
+
+  .venue::before {
+    left: 13%;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 300px) {
+
+}

@@ -1,0 +1,629 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+
+// HEADER SECTION //
+
+.header {
+
+  &__inner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px 0 40px;
+  }
+
+  &__inner-logo {
+    width: 104px;
+    height: 104px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 20px;
+  }
+
+}
+
+.menu_btn {
+  display: none;
+}
+
+.menu__list-item-link {
+  color: #8DBAB5;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.menu__list-item-link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #8DBAB5;
+  transition: width 0.5s;
+}
+
+.menu__list-item-link:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  background-color: #8DBAB5;
+  transition: width 0.5s;
+}
+
+.menu__list-item-custom {
+  display: none;
+}
+
+.menu {
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item-link {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  &__list-item-cs {
+    padding: 8px 24px 8px 40px;
+    background: #000000;
+    border-radius: 99px;
+    color: #fff;
+    position: relative;
+
+    &::before {
+      content: '+';
+      position: absolute;
+      left: 20px;
+    }
+  }
+}
+
+.menu__list-item + .menu__list-item {
+  margin-left: 64px;
+}
+
+.top {
+
+  padding-top: 90px;
+
+  &__inner {
+    margin: 0 auto 67px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 100%;
+    color: #C6754D;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 101px;
+    line-height: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__date {
+    font-size: 24px;
+    line-height: 100%;
+    color: #C6754D;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+.story {
+  margin-top: 130px;
+  margin-bottom: 130px;
+  background: #C6754D;
+
+  &__inner {
+    padding: 110px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 101px;
+    line-height: 100%;
+    color: #FCF9F7;
+  }
+
+  &__box {
+    max-width: 800px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 160%;
+    color: #FCF9F7;
+    margin-bottom: 30px;
+  }
+
+  &__bg {
+    background-image: url("../images/story.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    height: 600px;
+  }
+
+}
+
+.venue {
+
+  margin-bottom: 130px;
+  position: relative;
+
+  &::before {
+    content: url("../images/venue-decore.svg");
+    position: absolute;
+    bottom: -200px;
+    left: 40%;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    max-width: 539px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #C6754D;
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 100%;
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #2B1105;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+
+  &__place {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #2B1105;
+    opacity: 0.8;
+  }
+
+  &__img {
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  &__item {
+    position: relative;
+
+    &::before {
+      content: url("../images/venue-img-2.png");
+      position: absolute;
+      left: -30px;
+      top: -30px;
+      width: 100%;
+      height: auto;
+    }
+
+    &::after {
+      content: url("../images/venu-img-3.png");
+      position: absolute;
+      left: -30px;
+      top: -30px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.hotel {
+  padding-top: 140px;
+  margin-bottom: 140px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 384px;
+    flex-basis: 384px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 100%;
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #2B1105;
+    opacity: 0.8;
+    margin-bottom: 32px;
+  }
+
+  &__button {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    color: #C6754D;
+    padding: 18px 26px;
+    background: #FCF9F7;
+    border: 1px solid #C6754D;
+  }
+}
+
+.party {
+
+  margin-bottom: 100px;
+
+  &__title {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 100%;
+    color: #2B1105;
+    margin-bottom: 64px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 200px;
+    position: relative;
+
+    &::before {
+      content: url("../images/venue-decore.svg");
+      position: absolute;
+      bottom: 0;
+      left: 40%;
+    }
+  }
+
+  &__item {
+    flex-basis: 131px;
+    max-width: 131px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__box {
+    display: flex;
+    gap: 64px;
+  }
+
+  &__img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+  }
+
+  &__items-link {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    color: #2B1105;
+    opacity: 0.6;
+    display: inline-block;
+    transition: ease 0.5s;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid #C6754D;
+      opacity: inherit;
+    }
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    text-align: center;
+  }
+
+}
+
+.info {
+
+  margin-bottom: 144px;
+
+  &__title {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 483px;
+    margin: 0 auto 64px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #2B1105;
+    opacity: 0.6;
+    display: inline-block;
+    transition: ease 0.5s;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid #C6754D;
+      opacity: inherit;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    padding-left: 200px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 170px;
+
+    div {
+      max-width: 640px;
+    }
+  }
+
+  &__items-time {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    color: #C6754D;
+  }
+
+  &__items-title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    margin-bottom: 32px;
+  }
+
+  &__items-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #2B1105;
+    opacity: 0.7;
+  }
+
+  &__items-text-cs {
+    margin-bottom: 24px;
+  }
+}
+
+.registry {
+
+  margin-bottom: 140px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__item-cs {
+    max-width: 608px !important;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 100%;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    opacity: 0.8;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.contact {
+
+
+  &__title {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    opacity: 0.8;
+    max-width: 800px;
+    margin: 0 auto 64px;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    display: block;
+  }
+
+  &__input {
+    background: #FCF9F7;
+    border: 1px solid #2B1105;
+    padding: 12px 16px;
+    min-height: 52px  ;
+  }
+
+  &__box {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 20px;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 600px;
+    padding-bottom: 200px;
+    position: relative;
+
+    &::before {
+      content: url("../images/contact-decore.svg");
+      position: absolute;
+      bottom: 0;
+      opacity: 0.03;
+    }
+  }
+
+  &__input-email {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    color: #C6754D;
+    width: 100%;
+    height: 50px;
+    background: #FCF9F7;
+    border: 1px solid #C6754D;
+    cursor: pointer;
+  }
+}
+
+.footer {
+
+  padding: 32px 0 32px 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__menu-link {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    color: #2B1105;
+  }
+
+  &__copy-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+  }
+}
+
+.footer__menu-link {
+  color: #8DBAB5;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer__menu-link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #8DBAB5;
+  transition: width 0.5s;
+}
+
+.footer__menu-link:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  background-color: #8DBAB5;
+  transition: width 0.5s;
+}
+
+
+@import "media";
+
